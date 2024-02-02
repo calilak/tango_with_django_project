@@ -19,6 +19,8 @@ from django.urls import include
 from rango import views
 
 urlpatterns = [
-    path('', views.index, name = 'index'), #urls are mapped to the index view
+    path('', views.index, name='index'),
+    path('rango/', include('rango.urls')),
+    path('about/', views.about, name = 'about'),
     path('admin/', admin.site.urls),
 ]
