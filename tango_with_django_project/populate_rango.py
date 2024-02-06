@@ -10,20 +10,20 @@ def populate():
 
     #lists of dictionaries
     python_pages = [
-        {'title': 'Official Python Tutorial', 'url': 'http://docs.python.org/3/tutorial/'},
-        {'title': 'How to Think like a Computer Scientist', 'url': 'http://www.greenteapress.com/thinkpython/'},
-        {'title': 'Learn Python in 10 Minutes', 'url': 'http://www.korokithakis.net/tutorials/python/'}
+        {'title': 'Official Python Tutorial', 'url': 'http://docs.python.org/3/tutorial/', 'views':50},
+        {'title': 'How to Think like a Computer Scientist', 'url': 'http://www.greenteapress.com/thinkpython/', 'views':20},
+        {'title': 'Learn Python in 10 Minutes', 'url': 'http://www.korokithakis.net/tutorials/python/', 'views':100}
     ]
 
     django_pages = [
-        {'title': 'Official Django Tutorial', 'url': 'https://docs.djangoproject.com/en/2.1/intro/tutorial01/'},
-        {'title': 'Django Rocks', 'url': 'http://www.djangorocks.com/'},
-        {'title': 'How to Tango with Django', 'url': 'http://www.tangowithdjango.com/'}
+        {'title': 'Official Django Tutorial', 'url': 'https://docs.djangoproject.com/en/2.1/intro/tutorial01/', 'views':30},
+        {'title': 'Django Rocks', 'url': 'http://www.djangorocks.com/', 'views':30},
+        {'title': 'How to Tango with Django', 'url': 'http://www.tangowithdjango.com/', 'views':50}
     ]
 
     other_pages = [
-        {'title': 'Bottle', 'url': 'http://bottlepy.orgs/docs/dev/'},
-        {'title': 'Flask', 'url': 'http://flask.pocoo.org'}
+        {'title': 'Bottle', 'url': 'http://bottlepy.orgs/docs/dev/', 'views':8},
+        {'title': 'Flask', 'url': 'http://flask.pocoo.org', 'views':20}
     ]
 
     #a dictionary of dictionaries to define categories of pages
@@ -42,7 +42,7 @@ def populate():
         else:
             c = add_cat(cat)
         for p in cat_data['pages']:
-            add_page(c,p['title'], p['url']) #adds each associated page for that category
+            add_page(c,p['title'], p['url'], p['views']) #adds each associated page for that category
 
     #print out categories added
     for c in Category.objects.all():
