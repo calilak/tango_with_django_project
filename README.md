@@ -7,5 +7,5 @@ Chapter 5: Complete
 Chapter 6: Complete (1 failure)  
 Chapter 7: Complete (1 failure)  
 Chapter 8: Complete  
-Chapter 9: Incomplete  
+Chapter 9: Complete  
 Chapter 10: Incomplete
